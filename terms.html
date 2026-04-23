@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms of Service — VOSS Intel</title>
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Rajdhani:wght@400;500;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --dark: #050c0f;
+      --dark-2: #0a1a20;
+      --green: #00ff88;
+      --green-dim: #00cc6a;
+      --cyan: #00d4ff;
+      --white: #ffffff;
+      --off-white: #f7f9fb;
+      --gray: #6b7f8a;
+      --light-gray: #e8eef2;
+      --dark-text: #1a2c35;
+      --accent: #0a7c5c;
+    }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--dark);
+      color: var(--white);
+      overflow-x: hidden;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 28px 60px;
+      border-bottom: 1px solid rgba(0,255,136,0.1);
+      background: var(--dark);
+    }
+
+    .nav-logo {
+      font-family: 'Share Tech Mono', monospace;
+      font-size: 1.5rem;
+      color: var(--green);
+      letter-spacing: 0.15em;
+      text-decoration: none;
+    }
+
+    .nav-logo span {
+      color: rgba(0,255,136,0.4);
+      font-size: 0.7rem;
+      display: block;
+      letter-spacing: 0.3em;
+      margin-top: -4px;
+    }
+
+    .nav-cta {
+      font-family: 'Rajdhani', sans-serif;
+      font-weight: 700;
+      font-size: 0.8rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--dark);
+      background: var(--green);
+      border: none;
+      padding: 10px 24px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+
+    .nav-cta:hover { background: var(--green-dim); }
+
+    .page-header {
+      background: var(--dark-2);
+      border-bottom: 1px solid rgba(0,255,136,0.08);
+      padding: 60px 60px 48px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .page-header::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(0,255,136,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0,255,136,0.03) 1px, transparent 1px);
+      background-size: 40px 40px;
+    }
+
+    .page-header-inner { position: relative; z-index: 2; max-width: 860px; }
+
+    .page-label {
+      font-family: 'Share Tech Mono', monospace;
+      font-size: 0.7rem;
+      letter-spacing: 0.4em;
+      color: var(--green);
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .page-title {
+      font-family: 'Rajdhani', sans-serif;
+      font-weight: 700;
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1.1;
+      margin-bottom: 16px;
+    }
+
+    .page-meta {
+      font-family: 'Share Tech Mono', monospace;
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.3);
+      letter-spacing: 0.1em;
+    }
+
+    .content-wrap {
+      background: var(--off-white);
+      color: var(--dark-text);
+    }
+
+    .content {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 80px 60px;
+    }
+
+    .content h2 {
+      font-family: 'Rajdhani', sans-serif;
+      font-weight: 700;
+      font-size: 1.4rem;
+      letter-spacing: 0.05em;
+      color: var(--dark-text);
+      margin-top: 48px;
+      margin-bottom: 16px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid var(--accent);
+      display: inline-block;
+    }
+
+    .content h2:first-child { margin-top: 0; }
+
+    .content p {
+      font-size: 0.95rem;
+      line-height: 1.85;
+      color: var(--gray);
+      margin-bottom: 16px;
+    }
+
+    .content ul {
+      margin: 12px 0 16px 24px;
+    }
+
+    .content ul li {
+      font-size: 0.95rem;
+      line-height: 1.85;
+      color: var(--gray);
+      margin-bottom: 8px;
+    }
+
+    .content a {
+      color: var(--accent);
+      text-decoration: underline;
+    }
+
+    .highlight-box {
+      background: #e8f7f0;
+      border-left: 3px solid var(--accent);
+      padding: 20px 24px;
+      margin: 24px 0;
+      border-radius: 0 4px 4px 0;
+    }
+
+    .highlight-box p {
+      margin: 0;
+      color: var(--dark-text);
+      font-weight: 500;
+    }
+
+    footer {
+      background: #020a0d;
+      padding: 40px 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-top: 1px solid rgba(0,255,136,0.08);
+    }
+
+    .footer-logo {
+      font-family: 'Share Tech Mono', monospace;
+      font-size: 1.1rem;
+      color: var(--green);
+      letter-spacing: 0.15em;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 24px;
+    }
+
+    .footer-links a {
+      font-family: 'Share Tech Mono', monospace;
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.3);
+      text-decoration: none;
+      letter-spacing: 0.05em;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover { color: var(--green); }
+
+    .footer-copy {
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.2);
+      font-family: 'Share Tech Mono', monospace;
+      letter-spacing: 0.05em;
+    }
+
+    @media (max-width: 768px) {
+      nav, .page-header, .content, footer { padding-left: 24px; padding-right: 24px; }
+      footer { flex-direction: column; gap: 16px; text-align: center; }
+      .footer-links { flex-wrap: wrap; justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="https://vossintel.com" class="nav-logo">
+    VOSS INTEL
+    <span>Virtual Operating System Synopsis</span>
+  </a>
+  <a href="https://app.vossintel.com" class="nav-cta">Try VOSS ↗</a>
+</nav>
+
+<div class="page-header">
+  <div class="page-header-inner">
+    <p class="page-label">// Legal</p>
+    <h1 class="page-title">Terms of Service</h1>
+    <p class="page-meta">// Effective Date: April 23, 2026 &nbsp;|&nbsp; VOSS Reporting LLC &nbsp;|&nbsp; Florida, USA</p>
+  </div>
+</div>
+
+<div class="content-wrap">
+  <div class="content">
+
+    <div class="highlight-box">
+      <p>Please read these Terms of Service carefully before using VOSS Intel. By accessing or using our service, you agree to be bound by these terms.</p>
+    </div>
+
+    <h2>1. Agreement to Terms</h2>
+    <p>These Terms of Service ("Terms") constitute a legally binding agreement between you ("User," "you," or "your") and VOSS Reporting LLC ("VOSS Intel," "we," "us," or "our"), a Florida limited liability company, governing your access to and use of the VOSS Intel platform, including any associated websites, applications, and services (collectively, the "Service").</p>
+    <p>By creating an account, accessing, or using the Service, you confirm that you are at least 18 years of age, have read and understood these Terms, and agree to be bound by them. If you do not agree, do not use the Service.</p>
+
+    <h2>2. Description of Service</h2>
+    <p>VOSS Intel is an AI-powered productivity reporting platform that allows users to submit AI chat transcripts and receive structured reports analyzing the value, tasks, and projected ROI of their AI-assisted work sessions. The Service includes:</p>
+    <ul>
+      <li>AI-generated value and productivity reports</li>
+      <li>Task identification and action priority lists</li>
+      <li>Session tracking and report history</li>
+      <li>PDF export and sharing functionality</li>
+      <li>Free and paid subscription tiers (when available)</li>
+    </ul>
+    <p>VOSS Intel reports are AI-generated estimates only and do not constitute financial, legal, or professional advice. All projected values are approximations based on submitted data and algorithmic analysis.</p>
+
+    <h2>3. User Accounts</h2>
+    <p>To access certain features of the Service, you may be required to create an account. You agree to:</p>
+    <ul>
+      <li>Provide accurate, current, and complete information during registration</li>
+      <li>Maintain the security of your account credentials</li>
+      <li>Promptly notify us of any unauthorized use of your account</li>
+      <li>Accept responsibility for all activity that occurs under your account</li>
+    </ul>
+    <p>We reserve the right to suspend or terminate accounts that violate these Terms or that we reasonably believe have been compromised.</p>
+
+    <h2>4. Acceptable Use</h2>
+    <p>You agree to use the Service only for lawful purposes and in accordance with these Terms. You agree not to:</p>
+    <ul>
+      <li>Submit content that is illegal, harmful, threatening, abusive, or violates any third-party rights</li>
+      <li>Attempt to gain unauthorized access to any portion of the Service or its related systems</li>
+      <li>Use the Service to transmit spam, malware, or other malicious content</li>
+      <li>Reverse engineer, decompile, or disassemble any portion of the Service</li>
+      <li>Use automated tools to scrape, crawl, or extract data from the Service without prior written consent</li>
+      <li>Impersonate any person or entity or misrepresent your affiliation with any person or entity</li>
+      <li>Submit chat transcripts containing confidential third-party information without authorization</li>
+    </ul>
+
+    <h2>5. Submitted Content</h2>
+    <p>When you submit chat transcripts or other content to the Service ("User Content"), you retain ownership of that content. By submitting User Content, you grant VOSS Reporting LLC a limited, non-exclusive, royalty-free license to process, analyze, and store that content solely for the purpose of providing the Service to you.</p>
+    <p>You represent and warrant that you have all necessary rights to submit the User Content and that doing so does not violate any third-party rights or applicable laws. You are solely responsible for ensuring that any AI chat transcripts you submit do not contain confidential or proprietary information belonging to third parties without authorization.</p>
+
+    <h2>6. AI-Generated Reports — Disclaimer</h2>
+    <p>VOSS Intel reports are generated by artificial intelligence and are provided for informational and productivity tracking purposes only. You acknowledge and agree that:</p>
+    <ul>
+      <li>All projected values, hours saved estimates, and ROI calculations are approximations only</li>
+      <li>Reports may contain errors, omissions, or inaccuracies</li>
+      <li>VOSS Intel reports do not constitute financial, legal, accounting, or professional advice</li>
+      <li>You should independently verify any figures before making business decisions based on them</li>
+      <li>VOSS Reporting LLC makes no warranties regarding the accuracy or completeness of AI-generated reports</li>
+    </ul>
+
+    <h2>7. Subscription Plans and Payments</h2>
+    <p>VOSS Intel currently offers a free tier of service. Paid subscription plans will be made available in the future. When paid plans are introduced:</p>
+    <ul>
+      <li>Subscription fees will be clearly disclosed before purchase</li>
+      <li>Payments will be processed by a third-party payment processor</li>
+      <li>Subscriptions will automatically renew unless cancelled before the renewal date</li>
+      <li>Refund policies will be specified at the time paid plans are launched</li>
+    </ul>
+    <p>We reserve the right to modify pricing with reasonable advance notice to users.</p>
+
+    <h2>8. Intellectual Property</h2>
+    <p>The Service, including all software, designs, logos, text, and functionality, is owned by VOSS Reporting LLC and is protected by applicable intellectual property laws. Nothing in these Terms grants you any right to use VOSS Intel's trademarks, logos, or brand features without prior written consent.</p>
+    <p>You retain ownership of your User Content. VOSS Reporting LLC retains ownership of all AI-generated report structures, templates, and output formats.</p>
+
+    <h2>9. Privacy</h2>
+    <p>Your use of the Service is also governed by our <a href="/privacy.html">Privacy Policy</a>, which is incorporated into these Terms by reference. By using the Service, you consent to the collection and use of your information as described in the Privacy Policy.</p>
+
+    <h2>10. Limitation of Liability</h2>
+    <p>To the maximum extent permitted by applicable law, VOSS Reporting LLC and its members, officers, employees, and agents shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including but not limited to loss of profits, data, or business opportunities, arising out of or relating to your use of the Service.</p>
+    <p>In no event shall our total liability to you exceed the greater of (a) the amount you paid us in the twelve months preceding the claim, or (b) one hundred dollars ($100.00 USD).</p>
+
+    <h2>11. Disclaimer of Warranties</h2>
+    <p>The Service is provided "as is" and "as available" without warranties of any kind, either express or implied, including but not limited to implied warranties of merchantability, fitness for a particular purpose, or non-infringement. We do not warrant that the Service will be uninterrupted, error-free, or free of viruses or other harmful components.</p>
+
+    <h2>12. Indemnification</h2>
+    <p>You agree to indemnify, defend, and hold harmless VOSS Reporting LLC and its members, officers, employees, and agents from and against any claims, liabilities, damages, losses, and expenses, including reasonable legal fees, arising out of or in any way connected with your access to or use of the Service, your User Content, or your violation of these Terms.</p>
+
+    <h2>13. Termination</h2>
+    <p>We reserve the right to suspend or terminate your access to the Service at any time, with or without cause, and with or without notice. Upon termination, your right to use the Service will immediately cease. Provisions of these Terms that by their nature should survive termination shall survive, including ownership provisions, warranty disclaimers, and limitations of liability.</p>
+
+    <h2>14. Governing Law</h2>
+    <p>These Terms shall be governed by and construed in accordance with the laws of the State of Florida, USA, without regard to its conflict of law principles. Any dispute arising under these Terms shall be resolved exclusively in the state or federal courts located in Florida, and you consent to personal jurisdiction in such courts.</p>
+
+    <h2>15. Changes to These Terms</h2>
+    <p>We reserve the right to modify these Terms at any time. We will notify users of material changes by updating the effective date at the top of this page and, where appropriate, by sending an email notification. Your continued use of the Service after changes become effective constitutes your acceptance of the revised Terms.</p>
+
+    <h2>16. Contact Us</h2>
+    <p>If you have any questions about these Terms of Service, please contact us at:</p>
+    <ul>
+      <li><strong>Company:</strong> VOSS Reporting LLC</li>
+      <li><strong>Website:</strong> <a href="https://vossintel.com">vossintel.com</a></li>
+      <li><strong>Email:</strong> legal@vossintel.com</li>
+      <li><strong>State:</strong> Florida, USA</li>
+    </ul>
+
+  </div>
+</div>
+
+<footer>
+  <div class="footer-logo">VOSS INTEL</div>
+  <div class="footer-links">
+    <a href="/terms.html">Terms of Service</a>
+    <a href="/privacy.html">Privacy Policy</a>
+    <a href="https://app.vossintel.com">Try VOSS</a>
+  </div>
+  <div class="footer-copy">© 2026 VOSS Reporting LLC</div>
+</footer>
+
+</body>
+</html>
