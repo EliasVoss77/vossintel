@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>VOSS Intel — AI Collaboration Value Reports</title>
   <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Rajdhani:wght@400;500;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+
   <!-- MailerLite Universal -->
   <script>
     (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
@@ -14,11 +15,13 @@
     ml('account', '2271811');
   </script>
   <!-- End MailerLite Universal -->
+
   <style>
     /* MailerLite form overrides to match VOSS brand */
     .ml-embedded { width: 100%; max-width: 480px; }
     .ml-embedded * { box-sizing: border-box; }
   </style>
+
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -203,62 +206,6 @@
       animation: fadeUp 0.8s ease forwards 0.6s;
     }
 
-    /* EMAIL FORM */
-    .hero-form {
-      margin-top: 48px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 0;
-      max-width: 480px;
-      width: 100%;
-      opacity: 0;
-      animation: fadeUp 0.8s ease forwards 0.8s;
-    }
-
-    .hero-form input {
-      flex: 1;
-      background: rgba(255,255,255,0.05);
-      border: 1px solid rgba(0,255,136,0.25);
-      border-right: none;
-      color: var(--white);
-      font-family: 'DM Sans', sans-serif;
-      font-size: 0.95rem;
-      padding: 14px 20px;
-      outline: none;
-      transition: border-color 0.2s;
-    }
-
-    .hero-form input::placeholder { color: rgba(255,255,255,0.3); }
-    .hero-form input:focus { border-color: var(--green); }
-
-    .hero-form button {
-      font-family: 'Rajdhani', sans-serif;
-      font-weight: 700;
-      font-size: 0.85rem;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      background: var(--green);
-      color: var(--dark);
-      border: none;
-      padding: 14px 28px;
-      cursor: pointer;
-      white-space: nowrap;
-      transition: background 0.2s;
-    }
-
-    .hero-form button:hover { background: var(--green-dim); }
-
-    .form-note {
-      font-size: 0.75rem;
-      color: rgba(255,255,255,0.25);
-      margin-top: 12px;
-      font-family: 'Share Tech Mono', monospace;
-      letter-spacing: 0.05em;
-      opacity: 0;
-      animation: fadeUp 0.8s ease forwards 1s;
-    }
-
     /* STATS ROW */
     .hero-stats {
       display: flex;
@@ -270,9 +217,7 @@
       animation: fadeUp 0.8s ease forwards 1.1s;
     }
 
-    .stat {
-      text-align: center;
-    }
+    .stat { text-align: center; }
 
     .stat-value {
       font-family: 'Share Tech Mono', monospace;
@@ -357,9 +302,7 @@
       gap: 48px;
     }
 
-    .step {
-      position: relative;
-    }
+    .step { position: relative; }
 
     .step-number {
       font-family: 'Share Tech Mono', monospace;
@@ -391,6 +334,19 @@
       width: 48px;
       height: 1px;
       background: linear-gradient(to right, var(--accent), transparent);
+    }
+
+    /* Early access form block inside step 3 */
+    .step-form-block {
+      margin-top: 28px;
+    }
+
+    .form-note {
+      font-size: 0.75rem;
+      color: var(--gray);
+      margin-top: 10px;
+      font-family: 'Share Tech Mono', monospace;
+      letter-spacing: 0.05em;
     }
 
     /* FEATURES */
@@ -531,45 +487,6 @@
       margin-bottom: 48px;
     }
 
-    .bottom-form {
-      display: flex;
-      gap: 0;
-      max-width: 440px;
-      margin: 0 auto;
-    }
-
-    .bottom-form input {
-      flex: 1;
-      background: rgba(255,255,255,0.07);
-      border: 1px solid rgba(0,255,136,0.2);
-      border-right: none;
-      color: white;
-      font-family: 'DM Sans', sans-serif;
-      font-size: 0.95rem;
-      padding: 14px 20px;
-      outline: none;
-      transition: border-color 0.2s;
-    }
-
-    .bottom-form input::placeholder { color: rgba(255,255,255,0.25); }
-    .bottom-form input:focus { border-color: var(--green); }
-
-    .bottom-form button {
-      font-family: 'Rajdhani', sans-serif;
-      font-weight: 700;
-      font-size: 0.85rem;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      background: var(--green);
-      color: var(--dark);
-      border: none;
-      padding: 14px 28px;
-      cursor: pointer;
-      transition: background 0.2s;
-    }
-
-    .bottom-form button:hover { background: var(--green-dim); }
-
     /* FOOTER */
     footer {
       background: #020a0d;
@@ -610,16 +527,6 @@
       50%       { opacity: 1;   transform: scaleY(1.2); }
     }
 
-    /* SUCCESS STATE */
-    .success-msg {
-      display: none;
-      font-family: 'Share Tech Mono', monospace;
-      font-size: 0.85rem;
-      color: var(--green);
-      letter-spacing: 0.1em;
-      margin-top: 16px;
-    }
-
     /* RESPONSIVE */
     @media (max-width: 900px) {
       nav { padding: 24px 28px; }
@@ -631,9 +538,6 @@
       .audience-cards { grid-template-columns: 1fr; }
       .hero-stats { gap: 32px; flex-wrap: wrap; justify-content: center; }
       footer { flex-direction: column; gap: 16px; text-align: center; }
-      .hero-form, .bottom-form { flex-direction: column; }
-      .hero-form input, .bottom-form input { border-right: 1px solid rgba(0,255,136,0.25); border-bottom: none; }
-      .hero-form button, .bottom-form button { width: 100%; }
     }
   </style>
 </head>
@@ -663,7 +567,8 @@
       Turn your AI conversations into<br>
       <span class="highlight">measurable business value.</span>
     </h1>
-    <p class="hero-sub">VOSS Intel quantifies the true ROI of human-AI collaboration. Instantly identify high-value 'Planned' opportunities, tasks currently 'In-Progress' and 'Completed' goals. Transform your chat logs into a strategic plan for development.
+    <p class="hero-sub">
+      VOSS Intel quantifies the true ROI of human-AI collaboration. Instantly identify high-value 'Planned' opportunities, tasks currently 'In-Progress' and 'Completed' goals. Transform your chat logs into a strategic plan for development.
     </p>
 
     <a href="https://app.vossintel.com" target="_blank" style="
@@ -681,8 +586,9 @@
       transition:background 0.2s, transform 0.15s;
       opacity:0;
       animation:fadeUp 0.8s ease forwards 0.75s;
-    " onmouseover="this.style.background='#00cc6a';this.style.transform='translateY(-2px)'"
-       onmouseout="this.style.background='#00ff88';this.style.transform='translateY(0)'">
+    "
+    onmouseover="this.style.background='#00cc6a';this.style.transform='translateY(-2px)'"
+    onmouseout="this.style.background='#00ff88';this.style.transform='translateY(0)'">
       ⚡ Try VOSS Now — It's Free
     </a>
 
@@ -723,20 +629,25 @@
         <p class="step-desc">Copy any AI work session — Claude, ChatGPT, or any LLM — and paste the transcript directly into VOSS Intel.</p>
         <div class="step-connector"></div>
       </div>
+
       <div class="step">
         <div class="step-number">02</div>
         <div class="step-title">VOSS Analyzes</div>
         <p class="step-desc">Our engine identifies tasks completed, hours saved, and the economic value of every deliverable produced in the session.</p>
         <div class="step-connector"></div>
       </div>
+
       <div class="step">
         <div class="step-number">03</div>
         <div class="step-title">Get Your Report</div>
         <p class="step-desc">Receive a full VOSS Intelligence Report: projected value, AI vs. human contribution breakdown, and prioritized next steps.</p>
-                    <div class="hero-form" id="early-access">
-      <div class="ml-embedded" data-form="k3LszP"></div>
-    </div>
-    <p class="form-note">// No spam. Early access only. Unsubscribe anytime.</p>
+
+        <!-- MailerLite Embedded Form -->
+        <div class="step-form-block" id="early-access">
+          <div class="ml-embedded" data-form="k3LszP"></div>
+          <p class="form-note">// No spam. Early access only. Unsubscribe anytime.</p>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -800,10 +711,9 @@
 <section class="bottom-cta">
   <div class="bottom-cta-inner">
     <h2>Ready to see what your<br><span>AI work is worth?</span></h2>
-    <p>Run a VOSS Intelligence Report and quantify your AI-human collaboration. Don't just save time—unlock the hidden value in your AI sessions.</p>
-        <a href="https://app.vossintel.com" target="_blank" style="
+    <p>Run a VOSS Intelligence Report and quantify your AI-human collaboration. Don't just save time — unlock the hidden value in your AI sessions.</p>
+    <a href="https://app.vossintel.com" target="_blank" style="
       display:inline-block;
-      margin-top:40px;
       font-family:'Rajdhani',sans-serif;
       font-weight:700;
       font-size:1rem;
@@ -814,18 +724,16 @@
       padding:16px 48px;
       text-decoration:none;
       transition:background 0.2s, transform 0.15s;
-      opacity:0;
-      animation:fadeUp 0.8s ease forwards 0.75s;
-    " onmouseover="this.style.background='#00cc6a';this.style.transform='translateY(-2px)'"
-       onmouseout="this.style.background='#00ff88';this.style.transform='translateY(0)'">
+    "
+    onmouseover="this.style.background='#00cc6a';this.style.transform='translateY(-2px)'"
+    onmouseout="this.style.background='#00ff88';this.style.transform='translateY(0)'">
       ⚡ Try VOSS Now — It's Free
     </a>
-    </div>
   </div>
 </section>
 
 <!-- ─── FOOTER ─── -->
-  <footer>
+<footer>
   <div class="footer-logo">VOSS INTEL</div>
   <div style="display:flex; gap:24px;">
     <a href="/terms.html" style="font-family:'Share Tech Mono',monospace; font-size:0.75rem; color:rgba(255,255,255,0.3); text-decoration:none;">Terms of Service</a>
@@ -835,45 +743,13 @@
   <div class="footer-copy">© 2026 VOSS Reporting LLC. All rights reserved.</div>
 </footer>
 
-<!-- DISCLAIMER BAR -->
+<!-- ─── DISCLAIMER BAR ─── -->
 <div style="background:#020a0d; border-top:1px solid rgba(0,255,136,0.06); padding:20px 60px; text-align:center;">
   <p style="font-family:'Share Tech Mono',monospace; font-size:0.68rem; color:rgba(255,255,255,0.18); letter-spacing:0.05em; line-height:1.8; max-width:800px; margin:0 auto;">
     // BETA — VOSS Intel is currently in active development. Features and reports are subject to change. &nbsp;|&nbsp;
     VOSS reports are AI-generated projections based on submitted session data. Results are estimates only and are not a guarantee of economic value or outcomes.
   </p>
 </div>
-
-<script>
-  function handleSignup(source) {
-    const input = document.getElementById(source + '-email');
-    const success = document.getElementById(source + '-success');
-    const email = input.value.trim();
-
-    if (!email || !email.includes('@')) {
-      input.style.borderColor = '#ff4444';
-      setTimeout(() => input.style.borderColor = '', 1500);
-      return;
-    }
-
-    // TODO: Replace this with your MailerLite embed endpoint
-    // For now, show success state
-    input.parentElement.style.display = 'none';
-    success.style.display = 'block';
-
-    console.log('Email captured:', email);
-    // You will wire this to MailerLite's embedded form action URL
-  }
-
-  // Allow Enter key on inputs
-  document.querySelectorAll('input[type="email"]').forEach(input => {
-    input.addEventListener('keydown', e => {
-      if (e.key === 'Enter') {
-        const source = input.id.replace('-email', '');
-        handleSignup(source);
-      }
-    });
-  });
-</script>
 
 </body>
 </html>
